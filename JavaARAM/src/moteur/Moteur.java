@@ -124,7 +124,10 @@ public class Moteur {
 
             return(h+":"+m);
     }
+    
+    
     public boolean compareTo(String source, String cible){
-        return source.equalsIgnoreCase(cible );
+        return source.equalsIgnoreCase(cible);
     }
+    
 }
