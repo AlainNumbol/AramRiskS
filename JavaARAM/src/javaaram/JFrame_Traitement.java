@@ -34,23 +34,39 @@ public class JFrame_Traitement extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        jLabel_Skin = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jLabel_Skin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        jLabel_Skin.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel_SkinMouseDragged(evt);
+            }
+        });
+        jLabel_Skin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel_SkinMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 775, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel_Skin, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel_Skin, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", jPanel1);
@@ -84,32 +100,15 @@ public class JFrame_Traitement extends javax.swing.JFrame {
         getContentPane().add(jTabbedPane1);
         jTabbedPane1.setBounds(0, 50, 780, 440);
 
-        jButton1.setText("Import");
-        jButton1.setToolTipText("Importer données");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(10, 10, 65, 23);
-
-        jLabel_Skin.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jLabel_SkinMouseDragged(evt);
-            }
-        });
-        jLabel_Skin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel_SkinMousePressed(evt);
-            }
-        });
-        getContentPane().add(jLabel_Skin);
-        jLabel_Skin.setBounds(0, 0, 780, 490);
-
         setSize(new java.awt.Dimension(796, 579));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel_SkinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SkinMousePressed
+        // TODO add your handling code here:
+        initX = evt.getX();
+        initY = evt.getY();
+    }//GEN-LAST:event_jLabel_SkinMousePressed
 
     private void jLabel_SkinMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SkinMouseDragged
         // TODO add your handling code here:
@@ -118,18 +117,6 @@ public class JFrame_Traitement extends javax.swing.JFrame {
         int deplacementY =  (int) (evt.getY()-initY);
         this.setLocation(this.getLocation().x+deplacementX, this.getLocation().y+deplacementY);
     }//GEN-LAST:event_jLabel_SkinMouseDragged
-
-    private void jLabel_SkinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SkinMousePressed
-        // TODO add your handling code here:
-        initX = evt.getX();
-        initY = evt.getY();
-    }//GEN-LAST:event_jLabel_SkinMousePressed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,7 +153,6 @@ public class JFrame_Traitement extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel_Skin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

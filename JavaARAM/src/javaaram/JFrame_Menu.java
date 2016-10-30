@@ -5,7 +5,9 @@
  */
 package javaaram;
 
+import java.util.logging.Level;
 import javax.swing.JOptionPane;
+import jxl.common.Logger;
 
 /**
  *
@@ -24,9 +26,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
         jLabelMenu.setIcon(null); // NOI18N
         jLabelInfo.setIcon(null); // NOI18N
         jLabelSite.setIcon(null); // NOI18Ns
-        jLabelReche.setIcon(null); // NOI18N
-        
-        
+
     }
 
     /**
@@ -43,7 +43,6 @@ public class JFrame_Menu extends javax.swing.JFrame {
         jLabelMenu = new javax.swing.JLabel();
         jLabelInfo = new javax.swing.JLabel();
         jLabelSite = new javax.swing.JLabel();
-        jLabelReche = new javax.swing.JLabel();
         jLabel_Exit = new javax.swing.JLabel();
         jLabel_Skin = new javax.swing.JLabel();
 
@@ -67,7 +66,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabelPrest);
-        jLabelPrest.setBounds(39, 147, 275, 115);
+        jLabelPrest.setBounds(109, 141, 274, 114);
 
         jLabelEtab.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -81,7 +80,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabelEtab);
-        jLabelEtab.setBounds(38, 276, 275, 115);
+        jLabelEtab.setBounds(109, 271, 273, 113);
 
         jLabelMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -95,7 +94,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabelMenu);
-        jLabelMenu.setBounds(333, 147, 126, 115);
+        jLabelMenu.setBounds(391, 272, 123, 113);
 
         jLabelInfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -109,7 +108,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabelInfo);
-        jLabelInfo.setBounds(332, 276, 126, 116);
+        jLabelInfo.setBounds(540, 270, 126, 116);
 
         jLabelSite.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -123,22 +122,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabelSite);
-        jLabelSite.setBounds(476, 147, 275, 115);
-
-        jLabelReche.setRequestFocusEnabled(false);
-        jLabelReche.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelRecheMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelRecheMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelRecheMouseExited(evt);
-            }
-        });
-        getContentPane().add(jLabelReche);
-        jLabelReche.setBounds(479, 276, 275, 114);
+        jLabelSite.setBounds(391, 142, 274, 113);
 
         jLabel_Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -148,6 +132,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
         getContentPane().add(jLabel_Exit);
         jLabel_Exit.setBounds(770, 0, 30, 30);
 
+        jLabel_Skin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG_Menu.png"))); // NOI18N
         jLabel_Skin.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 jLabel_SkinMouseDragged(evt);
@@ -159,7 +144,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel_Skin);
-        jLabel_Skin.setBounds(0, 0, 0, 540);
+        jLabel_Skin.setBounds(0, 0, 800, 540);
 
         pack();
         setLocationRelativeTo(null);
@@ -168,24 +153,24 @@ public class JFrame_Menu extends javax.swing.JFrame {
     private void jLabelPrestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPrestMouseClicked
         // TODO add your handling code here:
 
-//        JFrame_Fenetre f = null;
-//        try {
-//            f = new JFrame_Fenetre(1);
-//        } catch (Exception ex) {
-//            Logger.getLogger(JFrame_Fenetre.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        for(float i=100000;i>0;i--){
-//            this.setOpacity((float)i/100000);
-//        }
+        JFrame_Import f = null;
+        try {
+            f = new JFrame_Import();
+        } catch (Exception ex) {
+            
+        }
+        for(float i=100000;i>0;i--){
+            this.setOpacity((float)i/100000);
+        }
 //        f.setUndecorated(true);
-//        f.setOpacity((float) 0.95);
-//        f.show();
-//        this.dispose();
+        f.setOpacity((float) 0.95);
+        f.show();
+        this.dispose();
     }//GEN-LAST:event_jLabelPrestMouseClicked
 
     private void jLabelPrestMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPrestMouseEntered
         // TODO add your handling code here:
-        jLabelPrest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cli_A.png")));
+      jLabelPrest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_import.png")));
     }//GEN-LAST:event_jLabelPrestMouseEntered
 
     private void jLabelPrestMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPrestMouseExited
@@ -212,7 +197,7 @@ public class JFrame_Menu extends javax.swing.JFrame {
 
     private void jLabelEtabMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEtabMouseEntered
         // TODO add your handling code here:
-        jLabelEtab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pod_A.png"))); // NOI18N
+        jLabelEtab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btn_Rech.png"))); // NOI18N
     }//GEN-LAST:event_jLabelEtabMouseEntered
 
     private void jLabelEtabMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEtabMouseExited
@@ -270,28 +255,13 @@ public class JFrame_Menu extends javax.swing.JFrame {
 
     private void jLabelSiteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSiteMouseEntered
         // TODO add your handling code here:
-        jLabelSite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vente_A.png")));
+//        jLabelSite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vente_A.png")));
     }//GEN-LAST:event_jLabelSiteMouseEntered
 
     private void jLabelSiteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSiteMouseExited
         // TODO add your handling code here:
         jLabelSite.setIcon(null);
     }//GEN-LAST:event_jLabelSiteMouseExited
-
-    private void jLabelRecheMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRecheMouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jLabelRecheMouseClicked
-
-    private void jLabelRecheMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRecheMouseEntered
-        // TODO add your handling code here:
-        jLabelReche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Rech_A.png"))); // NOI18N
-    }//GEN-LAST:event_jLabelRecheMouseEntered
-
-    private void jLabelRecheMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRecheMouseExited
-        // TODO add your handling code here:
-        jLabelReche.setIcon(null);
-    }//GEN-LAST:event_jLabelRecheMouseExited
 
     private void jLabel_ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_ExitMouseClicked
         // TODO add your handling code here:
@@ -356,7 +326,6 @@ public class JFrame_Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelInfo;
     private javax.swing.JLabel jLabelMenu;
     private javax.swing.JLabel jLabelPrest;
-    private javax.swing.JLabel jLabelReche;
     private javax.swing.JLabel jLabelSite;
     private javax.swing.JLabel jLabel_Exit;
     private javax.swing.JLabel jLabel_Skin;
